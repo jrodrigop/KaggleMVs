@@ -1,0 +1,6 @@
+Columnas removidas
+
+Columnas con varianza cero:
+
+f33,f34,f35,f37,f38,f678
+f700,f701,f702,f736,f764
