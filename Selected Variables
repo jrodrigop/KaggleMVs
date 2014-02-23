@@ -19,8 +19,10 @@
   
   baseCMC = train_v2[,names(train_v2) [!( names(train_v2) %in% colineales)]]
   
-  # Como resultado deben obtener una base de 654 variables!, para obtener las variables
+  # Como resultado, deben obtener una base de 654 variables!, para obtener las variables
   # del test cambiar la base "train_v2" por "test_v2"
+  
+  write.csv(baseCMC,'file.csv')   # finalmente guardenla e imputen valores con Rattle
   
 #######################  
 # Obtener una muetra de los datos  
