@@ -22,3 +22,9 @@
   # Como resultado deben obtener una base de 654 variables!, para obtener las variables
   # del test cambiar la base "train_v2" por "test_v2"
   
+#######################  
+# Obtener una muetra de los datos  
+#######################  
+  indicesAleatorios = sort(sample(x=nrow(train_v2),size=100,replace=FALSE))
+  muestra = baseCMC[indicesAleatorios,]
+  
