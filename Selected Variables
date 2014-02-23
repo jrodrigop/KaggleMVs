@@ -22,7 +22,9 @@
   # Como resultado, deben obtener una base de 654 variables!, para obtener las variables
   # del test cambiar la base "train_v2" por "test_v2"
   
-  write.csv(baseCMC,'file.csv')   # finalmente guardenla e imputen valores con Rattle
+  # finalmente guardenla e imputen valores con Rattle
+  write.csv(baseCMC,'file.csv',row.names = FALSE)
+  
   
 #######################  
 # Obtener una muetra de los datos  
