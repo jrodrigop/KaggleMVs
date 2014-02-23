@@ -1,18 +1,24 @@
-  mejoresCincuenta = c('f13',  'f25',  'f32',  'f59',  'f64',
-  'f67',  'f68',  'f229',  'f259',  'f263',  'f273',  'f283',
-  'f287',  'f322',  'f332',  'f333',  'f339',  'f344',  'f351',
-  'f372',  'f376',  'f377',  'f380',  'f395',  'f404',  'f406',
-  'f407',  'f419',  'f420',  'f421',  'f423',  'f428',  'f597',
-  'f629',  'f631',  'f642',  'f663',  'f670',  'f671',  'f674',
-  'f676',  'f686',  'f703',  'f709',  'f752',  'f754',  'f759',
-  'f766',  'f767',  'f772')
+########################
+# Eliminar variables colineales y de varianza 0
+########################    
+  colineales = c('f457',  'f467', 'f478',	'f488',	'f498',	'f508',	'f608',	'f7',
+                 'f763',	'f354',	'f36' ,	'f362',	'f371',	'f379',	'f408',	'f417',
+                 'f427',	'f722',	'f729',	'f74' ,	'f58' ,	'f644',	'f453',	'f85',
+                 'f86' ,	'f87' ,	'f88' ,	'f494',	'f95' ,	'f96' ,	'f97' ,	'f98',
+                 'f106',	'f107',	'f108',	'f503',	'f504',	'f116',	'f117',	'f118',
+                 'f483',	'f484',	'f126',	'f127',	'f128',	'f155',	'f156',	'f157',
+                 'f165',	'f166',	'f167',	'f175',	'f176',	'f177',	'f185',	'f186',
+                 'f187',	'f195',	'f196',	'f197',	'f225',	'f226',	'f227',	'f538',
+                 'f539',	'f235',	'f236',	'f237',	'f548',	'f549',	'f245',	'f246',
+                 'f247',	'f558',	'f559',	'f255',	'f256',	'f257',	'f568',	'f569',
+                 'f265',	'f266',	'f267',	'f577',	'f578',	'f527',	'f528',	'f294',
+                 'f295',	'f296',	'f302',	'f303',	'f304',	'f326',	'f327',	'f328',
+                 'f310',	'f311',	'f312',	'f318',	'f319',	'f320',	'f768',	'f599',
+                 'f625',	'f765', 'f33' , 'f34' , 'f35' , 'f37' , 'f38' , 'f678',
+                 'f700','f701','f702','f736','f764')						  
   
-  # newfile - data.frame con la base de datos original
-  # mejoresCincuenta - son las mejores 50 variables que extrajeron
-  CMejoresCincuenta = names(newfile) [!( names(newfile) %in% mejoresCincuenta)]
-
-  baseCMC = newfile[,CMejoresCincuenta]
+  baseCMC = train_v2[,names(train_v2) [!( names(train_v2) %in% colineales)]]
   
-  # componentes principales
-  res = princomp(baseCMC)
+  # Como resultado deben obtener una base de 654 variables!, para obtener las variables
+  # del test cambiar la base "train_v2" por "test_v2"
   
